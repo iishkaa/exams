@@ -9,22 +9,77 @@
     <link rel="stylesheet" href="styl.css">
 </head>
 <body>
-<nav></nav>
+<nav>
+    <?php
+    for ($i = 0; $i <= 20; $i++) {
+        echo "<img src='obraz.png'>";
+    }
+    ?>
+</nav>
 <section>
     <h2>Liryka</h2>
     <form action="" method="post">
         <select name="lista" id="lista">
-            <!--skrypt2-->
+            <?php
+            $host = "localhost";
+            $user = "root";
+            $password = "";
+            $dbname = "biblioteka";
+            $conn = mysqli_connect($host, $user, $password, $dbname);
+            if (!$conn) {
+                die("blad z baza danych: " . mysqli_connect_error());
+            }
+            $sql = "SELECT id, tytul FROM `ksiazka` WHERE gatunek = 'liryka';";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<option value='" . $row["id"] . "'>" . $row["tytul"] . "</option>";
+                }
+            }
+            mysqli_close($conn);
+            ?>
+
         </select>
-        <button>Rezerwuj</button> <!--wysyla do skrypt3-->
-        <!--skrypt3-->
+        <button id="one">Rezerwuj</button> <!--wysyla do skrypt3-->
+        <?php
+        $host = "localhost";
+        $user = "root";
+        $password = "";
+        $dbname = "biblioteka";
+        $conn = mysqli_connect($host, $user, $password, $dbname);
+        if (!$conn) {
+            die("blad z baza danych: " . mysqli_connect_error());
+        }
+        if(isset($_POST['one'])) {
+            $id = $_POST['$row["id"]'];
+            $sql = "SELECT tytul FROM `ksiazka` WHERE id = '$id';";
+        }
+
+        ?>
     </form>
 </section>
 <section>
     <h2>Epika</h2>
     <form action="" method="post">
         <select name="lista2" id="lista2">
-            <!--skrypt2-->
+            <?php
+            $host = "localhost";
+            $user = "root";
+            $password = "";
+            $dbname = "biblioteka";
+            $conn = mysqli_connect($host, $user, $password, $dbname);
+            if (!$conn) {
+                die("blad z baza danych: " . mysqli_connect_error());
+            }
+            $sql = "SELECT id, tytul FROM `ksiazka` WHERE gatunek = 'epika';";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<option value='" . $row["id"] . "'>" . $row["tytul"] . "</option>";
+                }
+            }
+            mysqli_close($conn);
+            ?>
         </select>
         <button>Rezerwuj</button><!--wysyla do skrypt3-->
         <!--skrypt3-->
@@ -34,7 +89,24 @@
     <h2>Dramat</h2>
     <form action="" method="post">
         <select name="lista3" id="lista3">
-            <!--skrypt2-->
+            <?php
+            $host = "localhost";
+            $user = "root";
+            $password = "";
+            $dbname = "biblioteka";
+            $conn = mysqli_connect($host, $user, $password, $dbname);
+            if (!$conn) {
+                die("blad z baza danych: " . mysqli_connect_error());
+            }
+            $sql = "SELECT id, tytul FROM `ksiazka` WHERE gatunek = 'dramat';";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<option value='" . $row["id"] . "'>" . $row["tytul"] . "</option>";
+                }
+            }
+            mysqli_close($conn);
+            ?>
         </select>
         <button>Rezerwuj</button><!--wysyla do skrypt3-->
         <!--skrypt3-->
