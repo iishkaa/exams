@@ -1,0 +1,41 @@
+body{
+    font-family: Century Gothic, sans-serif;
+    text-align: center;
+    background-color: #FCE4EC;
+}
+header, footer{
+    background-color: #880E4F;
+    padding: 10px;
+    letter-spacing: 20px;
+}
+.left{
+    width: 50%;
+    height: 600px;
+    overflow: auto;
+    box-sizing: border-box;
+    float: left;
+}
+.right{
+    background-color: #880E4F;
+    color: white;
+    width: 40%;
+    height: 500px;
+    margin: 35px;
+    box-shadow: 10px 10px 15px DimGray;
+    box-sizing: border-box;
+    float: left;
+}
+table{
+    margin: auto;
+    width: 70%;
+}
+input{
+    margin: 5px;
+    width: 70%;
+}
+tr:hover{
+    background-color: #F8BBD0;
+}
+footer{
+    clear: both;
+}
