@@ -6,6 +6,7 @@ body{
     background-color: MistyRose;
 }
 nav, footer{
+
     height: 200px;
     text-align: center;
     overflow: hidden;

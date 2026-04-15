@@ -10,7 +10,7 @@
 </head>
 <body>
 <nav>
-<!--   skrypt1 --><?php
+    <!--   skrypt1 --><?php
     for ($i = 0; $i <= 20; $i++) {
         echo "<img src='obraz.png'>";
     }
@@ -173,6 +173,7 @@
 <section>
     <h2>Zaległe książki</h2>
     <ul>
+
         <?php
         $host = "localhost";
         $user = "root";

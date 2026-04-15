@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #FFCC99;
+    font-family: Garamond;
+    text-align: center;
+}
+header, footer {
+    background-color: DarkGreen;
+    color: white;
+    padding: 30px;
+    font-size: 140%;
+}
+nav {
+    background-color: MediumSeaGreen;
+    word-spacing: 90px;
+    padding: 20px;
+}
+.left {
+    width: 70%;
+    height: 500px;
+    float: left;
+
+}
+.right {
+    background-color: MediumSeaGreen;
+    width: 30%;
+    height: 500px;
+    text-align: left;
+    float: left;
+
+}
+table {
+    border: 1px dashed DarkGreen;
+    margin: 30px auto;
+}
+td, th {
+    padding: 5px;
+}
+tr:hover {
+    background-color: DarkGreen;
+    color: white;
+}
+a {
+    color: white;
+}
+ul {
+    list-style-type: circle;
+}
+main::after {
+    content: "";
+    display: block;
+    clear: both;
+}

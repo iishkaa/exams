@@ -101,6 +101,8 @@ mysqli_close($conn);
     <section>
         <h3>Wycieczki</h3>
 
+
+
         <?php
         $host = "localhost";
         $user = "root";
