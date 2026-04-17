@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fotografia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Fotografia artystyczna</h1>
+</header>
+<section>
+    <img src="1.jpg" alt="obrazy do sprzedaży" title="1.jpg">
+    <img src="2.jpg" alt="obrazy do sprzedaży" title="2.jpg">
+    <img src="3.jpg" alt="obrazy do sprzedaży" title="3.jpg">
+    <img src="4.jpg" alt="obrazy do sprzedaży" title="4.jpg">
+    <img src="5.jpg" alt="obrazy do sprzedaży" title="5.jpg">
+    <img src="6.jpg" alt="obrazy do sprzedaży" title="6.jpg">
+    <img src="7.jpg" alt="obrazy do sprzedaży" title="7.jpg">
+    <img src="8.jpg" alt="obrazy do sprzedaży" title="8.jpg">
+    <img src="9.jpg" alt="obrazy do sprzedaży" title="9.jpg">
+    <img src="10.jpg" alt="obrazy do sprzedaży" title="10.jpg">
+</section>
+<main>
+    <section class="left">
+        <h3>Zamówienie</h3>
+        <label for="wybierzObraz">Wybierz obraz: </label>
+        <input type="file" id="wybierzObraz" name="wybierzObraz" accept=".jpg,.jpeg"><br>
+        <label for="liczKopii">Liczba Kopii: </label>
+        <input type="number" id="liczKopii" name="liczKopii"><br>
+        <label>
+            <input type="radio" name="rodzajPapieru" value="błyszczący" checked>Papier błyszczący
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="rodzajPapieru" value="matowy">Papier matowy
+        </label><br>
+        <input type="submit" value="Dodaj do koszyka" id="submit" onclick="dodajDoKoszyka()">
+    </section>
+    <nav>
+        <ul>
+            <li>
+                <a href="regulamin.html">Regulamin</a>
+            </li>
+            <li>
+                <a href="uslugi.html">Usługi</a>
+            </li>
+            <li>
+                <a href="https://pixabay.com">Zdjęcia</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="right">
+        <h3>Koszyk</h3>
+        <script>
+            function dodajDoKoszyka() {
+                let plik = document.getElementById("wybierzObraz").value;
+                let liczbaKopii = document.getElementById("liczKopii").value;
+                let papier = document.querySelector('input[name="rodzajPapieru"]:checked').value;
+                let nazwaPliku = plik.split('\\').pop();
+                let cenaJednostkowa = 0;
+                if (papier === "błyszczący") {
+                    cenaJednostkowa = 1.5;
+                } else {
+                    cenaJednostkowa = 2;
+                }
+                let cena = liczbaKopii * cenaJednostkowa;
+                let obraz = document.createElement("img");
+                obraz.src = nazwaPliku;
+                let pKopie = document.createElement("p");
+                pKopie.textContent = "Liczba kopii: " + liczbaKopii;
+                let pCena = document.createElement("p");
+                pCena.textContent = "Cena: " + cena;
+                let koszyk = document.getElementById("wynik");
+                koszyk.appendChild(obraz);
+                koszyk.appendChild(pKopie);
+                koszyk.appendChild(pCena);
+            }
+        </script>
+        <div id="wynik"></div>
+    </section>
+</main>
+<footer>
+    <p>Autor strony: <em> Michalina Wolna 3p_2</em></p>
+</footer>
+</body>
+</html>
