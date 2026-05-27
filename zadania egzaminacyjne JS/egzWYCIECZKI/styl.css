@@ -1,0 +1,68 @@
+* {
+    font-family: Georgia;
+    color: white;
+}
+header, footer {
+    background-color: Maroon;
+    text-align: center;
+    padding: 2px;
+}
+.left, .between, .right {
+    background-color: LightSalmon;
+    height: 527px;
+    float: left;
+}
+.left, .right {
+    width: 15%;
+}
+.between {
+    width: 70%;
+}
+.miniatury {
+    background-color: Maroon;
+    height: 70px;
+    clear: both;
+}
+button {
+    background-color: LightSalmon;
+    color: Maroon;
+    border: none;
+    font-size: 400%;
+    display: block;
+    margin: auto;
+    padding-top: 210px;
+}
+.miniatury img {
+    height: 70px;
+    animation: animacjaMarginesu 4s ease-in-out infinite;
+}
+.between img {
+    display: block;
+    margin: auto;
+    padding-top: 45px ;
+}
+.between img:hover {
+    scale: 120%;
+    animation: animacjaHover 5s ease-in-out;
+}
+footer {
+    clear: both;
+}
+
+
+@keyframes animacjaMarginesu {
+    0% {
+        padding-left: 50px ;
+    }
+    100% {
+        padding-left: 0px;
+    }
+}
+@keyframes animacjaHover {
+    0% {
+        scale: 100%;
+    }
+    100% {
+        scale: 120%;
+    }
+}
