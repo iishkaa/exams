@@ -1,0 +1,37 @@
+* {
+    font-family: Century, Serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+header, footer {
+    background-color: Indigo;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+    clear: both;
+}
+section {
+    width: 50%;
+    height: 470px;
+    float: left;
+}
+img {
+    padding: 3px;
+    margin: 10px;
+    border: 2px dashed SlateBlue;
+}
+a {
+    color: white;
+}
+button {
+    background-color: SlateBlue;
+    color: white;
+    border: none;
+    padding: 10px 20px 10px 20px;
+}
+button:hover {
+    background-color: Indigo;
+}
+#suwakOwoce, #suwakZolw {
+    width: 80%;
+}

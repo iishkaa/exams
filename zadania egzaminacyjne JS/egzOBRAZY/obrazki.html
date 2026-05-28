@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<header>
+    <h2>Efekty na obrazach</h2>
+</header>
+<section>
+    <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" id="pszczolka"><br>
+    <input type="radio" name="pszczolaOpcje" value="Blur" id="blur"><label for="blur">Blur</label>
+    <input type="radio" name="pszczolaOpcje" value="Sepia" id="sepia"><label for="sepia">Sepia</label>
+    <input type="radio" name="pszczolaOpcje" value="Negatyw" id="negatyw"><label for="negatyw">Negatyw</label><br>
+    <button id="btnZastosuj">Zastosuj</button>
+</section>
+<section>
+    <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="pomaranczka"><br>
+    <button id="kolor">Kolorowy</button>
+    <button id="czarnoBialy">Czarno-biały</button>
+</section>
+<section>
+    <img src="owoce.jpg" alt="Kosz pełen owoców" id="owocki">
+    <input type="range" min="0" max="100" value="100" id="suwakOwoce"><br>
+    <button id="btnZastosuj2">Zastosuj</button>
+</section>
+<section>
+    <img src="zolw.jpg" alt="Żółw w wodzie" id="zolwik"><br>
+    <input type="range" min="0" max="250" id="suwakZolw"><br>
+    <button id="btnZastosuj3">Zastosuj</button>
+</section>
+<footer>
+    <p>
+        <a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu</a>
+    </p>
+    <p>Stronę wykonał: iishkaa</p>
+</footer>
+
+
+<script src="main.js"></script>
+</body>
+</html>
